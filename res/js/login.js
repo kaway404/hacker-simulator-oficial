@@ -92,7 +92,7 @@ $('.verificar').click(function() {
           $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
       return false;
         }
-        else if(data == "sucess"){
+        else if(data == "true"){
       location.reload();  
     }
          }
