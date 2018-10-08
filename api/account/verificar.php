@@ -1,10 +1,6 @@
 <?php 
 require '../../config.php';
 
-if(isset($_COOKIE['iduser']) && (isset($_COOKIE['cry']) )){
-    echo 'Você está logado';
-}
-else{
 if(isset($_POST['email'])){
   $ip=$_SERVER['REMOTE_ADDR'];
 	$email = $_POST['email'];
@@ -25,6 +21,5 @@ if(isset($_POST['email'])){
         else{
         	echo 'check';
         }	
-}
 }
 ?>
