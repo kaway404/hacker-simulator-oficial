@@ -87,12 +87,7 @@ $('.verificar').click(function() {
         var senhaPost = senha.val();
         $.post("/verificando", {senha: senhaPost},
         function(data){
-        if(data == "01"){
-          $('.verificando input[type=password]').select();
-          $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
-      return false;
-        }
-        else if(data == "02"){
+        if(data == "check"){
           $('.verificando input[type=password]').select();
           $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
       return false;
