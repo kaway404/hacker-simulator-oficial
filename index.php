@@ -43,7 +43,7 @@ include 'api/user.php';
 </div>
 
 <?php
-if(empty($_COOKIE['iduser'])){?>
+if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 <!-- LOGIN -->
 <div id="pageLogin">
 	<header id="headlogin">
@@ -102,7 +102,55 @@ if(empty($_COOKIE['iduser'])){?>
 
 <script type="text/javascript" src="res/js/login.js"></script>
 
-<?Php } ?>
+<?Php } 
+        if(isset($_COOKIE['cry'])){
+        if(empty($_COOKIE['iduser'])){
+    ?>
+<!-- LOGIN -->
+<div id="pageLogin">
+    <header id="headlogin">
+        <nav id="menu-dx-login">
+        <ul>
+            <li class="wireless"></li>
+            <li class="time">
+            <ul>
+                <li class="hours"> </li>
+                <li class="point">:</li>
+                <li class="min"> </li>
+            </ul>
+            </li>
+        </ul>
+        </nav>
+    </header>
+    <div class="new-apple-logo"></div>
+    
+    <div class="user-avatar">
+        <div id="avatar">
+        <a href="#hide" class="" s="hide" id="hide"></a>
+        <a href="#show" class="show" id="show"></a>
+        <div id="cover"></div>
+        <div class="ava-css">
+        <img src="res/img/default.jpg" />
+        </div>
+        <div class="logName">
+        <p><?php echo $cry['username'];?></p>
+        </div>
+        <div id="switch">
+        <div class="validate logando">
+        <form>
+            <input type="password" id="password-ok" placeholder="Password" />
+            <input type="submit" class="verificar" style="top: 1px;" />
+            </form>
+        <a href="/logoutp" class="cadastrarse" style="color: #fff; position: relative; top: 10px; cursor: pointer;">Start session in other account</a>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="res/js/login.js"></script>
+
+<?php } } ?>
 
 <!-- DESKTOP -->
 <div id="page">
@@ -150,7 +198,7 @@ if(empty($_COOKIE['iduser'])){?>
             <li>Restart...</li>
             <li>Shut Down...</li>
             <li class="divider"></li>
-            <li>Log Out...</li>
+            <a href="/logout"><li>Log Out...</li></a>
             </ul>
         </li>
         <li class="here">
@@ -377,7 +425,7 @@ setInterval(function() {
 }, 1000);
 </script>
 
-<?php if(isset($_COOKIE['iduser'])){
+<?php if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 ?>
 <script type="text/javascript">
         $('#usernamea').html("<?php echo $user['username'];?>");

@@ -6,6 +6,9 @@ ErrorDocument 403 page404.php
 <IfModule mod_rewrite.c>
  RewriteEngine On
  RewriteRule ^logando /api/account/login.php
+ RewriteRule ^verificando /api/account/verificar.php
  RewriteRule ^cadastrando /api/account/cadastro.php
-  RewriteRule ^bzzzz /api/user.php
+ RewriteRule ^bzzzz /api/user.php
+ RewriteRule ^logoutp /api/logoutp.php
+  RewriteRule ^logout /api/logout.php
 </IfModule>
