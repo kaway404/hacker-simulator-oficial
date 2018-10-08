@@ -30,31 +30,9 @@ setInterval( function() {
 	$(".hours, .hour").html(( hours < 10 ? "0" : "" ) + hours);
     }, 1000);
 	
-//-----------------------------------------------------------------------------------
-//	2.	Fix Classes after Validate Login
-//-----------------------------------------------------------------------------------
-
-$('.submit').click(function() {
-	var ValPassword = $('#password').val() === 'admin';
-    if (ValPassword === true) {
-		$('input[type=password]').addClass('valid');
-		$('.tooltip-pass').hide();
-		$('.submit').removeClass('submit').addClass('charge');
-		$('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
-		$('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
-		$('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
-		event.preventDefault();
-    }
-    else {
-		$('.tooltip-pass').hide();
-		$('input[type=password]').select();
-    	$('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
-			return false;
-    	}
-});
 
 //-----------------------------------------------------------------------------------
-//	3.	Draggable Windows
+//	2.	Draggable Windows
 //-----------------------------------------------------------------------------------
 
 $('.content').remove();
@@ -65,7 +43,7 @@ $(".window").draggable({ handle: '.titleInside, .title-mac, .tab', refreshPositi
 
 
 //-----------------------------------------------------------------------------------
-//	4.	Dock
+//	3.	Dock
 //-----------------------------------------------------------------------------------
 
 $('.dock ul li').hover(
@@ -79,7 +57,7 @@ $('.dock ul li').hover(
 );
 
 //-----------------------------------------------------------------------------------
-//	5.	Hide and Close
+//	4.	Hide and Close
 //-----------------------------------------------------------------------------------
 var left = 50 + '%';
 var top = 15 + '%';
