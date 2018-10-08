@@ -150,8 +150,9 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 
 <script type="text/javascript" src="res/js/login.js"></script>
 
-<?php } } else{?>
+<?php } } ?>
 
+<?php if(isset($_COOKIE['iduser']) && (isset($_COOKIE['cry']) )){?>
 <!-- DESKTOP -->
 <div id="page">
 <header id="head">
@@ -418,16 +419,9 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
     $("#finder").hide();
     $("#terminal").hide();
 </script>
+<?php } ?>
 
 
-<?php if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
-?>
-<script type="text/javascript">
-        $('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
-        $('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
-        $('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
-</script>
-<?php } }?>
 
 
 </body>
