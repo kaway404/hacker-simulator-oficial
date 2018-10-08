@@ -6,6 +6,7 @@ $('.submit').click(function() {
 	var ValPassword = $('#password').val() === 'admin';
     if (ValPassword === true) {
 		$('input[type=password]').addClass('valid');
+		$('input[type=text]').addClass('valid');
 		$('.tooltip-pass').hide();
 		$('.submit').removeClass('submit').addClass('charge');
 		$('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
