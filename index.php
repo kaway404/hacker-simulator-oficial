@@ -79,6 +79,7 @@ if(empty($_COOKIE['iduser'])){?>
             <p>Password: admin</p>
             </div>
             </form>
+        <a href="#register" style="color: #fff; position: relative; top: 10px;">I dont have any account</a>
         </div>
         </div>
         </div>
