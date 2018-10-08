@@ -64,7 +64,7 @@ if(empty($_COOKIE['iduser'])){?>
         <a href="#show" class="show" id="show"></a>
         <div id="cover"></div>
         <div class="ava-css">
-        <img src="res/img/avatar.jpg" />
+        <img src="res/img/default.jpg" />
         </div>
         <div class="logName">
         <p>Alexandre Silva</p>
