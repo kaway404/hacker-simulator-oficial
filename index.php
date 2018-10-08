@@ -219,7 +219,7 @@ if(empty($_COOKIE['iduser'])){?>
         </div>
     </div>
 </div>
-
+<!-- Skype -->
 <div id="skype" class="window skype">
     <nav class="control-window">
     <a href="#skype" class="close" data-rel="close">close</a>
@@ -228,8 +228,12 @@ if(empty($_COOKIE['iduser'])){?>
     </nav>
     <h1 class="titleInside">Skype</h1>
     <div class="container">
-        <h1>Skype</h1>
-        <p>Contatos</p>
+        <div class="left">
+            <div class="status">
+                <img src="res/img/default.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: absolute; left: 10px; top: 5px;" />
+                <p><?php echo $user['username'];?></p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -311,13 +315,13 @@ if(empty($_COOKIE['iduser'])){?>
                 <img src="res/img/FinderIcon.png" alt="Finder"/>
             </a>
         </li>
-        <li id="skype">
+        <li id="skypee">
         	<a href="#skype" data-rel="skype">
             	<em><span>Skype</span></em>
                 <img src="res/img/skype.png" alt="Skype"/>
             </a>
         </li>
-         <li id="skype">
+         <li id="terminal">
             <a href="#terminal" data-rel="terminal">
                 <em><span>Terminal</span></em>
                 <img src="res/img/cmd.png" alt="Terminal"/>
@@ -360,7 +364,7 @@ if(empty($_COOKIE['iduser'])){?>
 
 
 <script type="text/javascript">
-    $("#skype").hide();
+    $("#skype").show();
     $("#about-this-mac").hide();
     $("#finder").hide();
     $("#terminal").hide();

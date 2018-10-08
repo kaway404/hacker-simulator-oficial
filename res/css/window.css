@@ -300,8 +300,28 @@ h1.title-mac {
 .window.skype {
 	width:300px;
 	left:50%;
-	top:28%;
+	top:20%;
 	margin:0px 0 0 -150px;
+}
+#skype{
+	width: 600px;
+	height: 500px;
+	padding-bottom: 22px;
+}
+#skype .container .left{
+	position: relative;
+	left: 0;
+	float: 0;
+	width: 30%;
+	background: #568cc1;
+	height: 100%;
+}
+#skype .container .left p{
+	position: relative;
+	color: #fff;
+	padding: 16px;
+	font-size: 14px;
+	left: 35px;
 }
 .window.terminal {
 	width:300px;
