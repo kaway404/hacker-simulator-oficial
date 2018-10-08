@@ -1,25 +1,19 @@
 <?php 
 require '../../config.php';
 
-if(isset($_POST['email'])){
-  $ip=$_SERVER['REMOTE_ADDR'];
-	$email = $_POST['email'];
-	
 	$password = sha1($_POST['senha']);
-    $iduser = $_COOKIE['iduser'];
+    $crys = $_COOKIE['cry'];
 
-		$result_usuario = "SELECT * FROM user WHERE id = '$iduser' && password = '$password' LIMIT 1";
-    $resultado_usuario = mysqli_query($conn, $result_usuario);
-    $resultado = mysqli_fetch_assoc($resultado_usuario);
-    if(isset($resultado)){
-    $iduser = $resultado['id'];
-    $iduser = $resultado['cry'];
-    setcookie("iduser", $resultado['id'], time() + (86400 * 30), "/");
-    setcookie("cry", $resultado['cry'], time() + (86400 * 30), "/");
+	$result_usuariot = "SELECT * FROM user WHERE cry = '$crys' && password = '$password' LIMIT 1";
+    $resultado_usuariot = mysqli_query($conn, $result_usuariot);
+    $resultadot = mysqli_fetch_assoc($resultado_usuariot);
+    if(isset($resultadot)){
+    $iduser = $resultadot['id'];
+    setcookie("iduser", $resultadot['id'], time() + (86400 * 30), "/");
+    setcookie("cry", $resultadot['cry'], time() + (86400 * 30), "/");
     echo 'true';
         }
         else{
         	echo 'check';
         }	
-}
 ?>

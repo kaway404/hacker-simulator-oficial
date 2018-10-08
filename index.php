@@ -103,7 +103,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 <script type="text/javascript" src="res/js/login.js"></script>
 
 <?Php } 
-        if(isset($_COOKIE['cry'])){
+        else if(isset($_COOKIE['cry'])){
         if(empty($_COOKIE['iduser'])){
     ?>
 <!-- LOGIN -->
@@ -136,9 +136,9 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
         <p><?php echo $cry['username'];?></p>
         </div>
         <div id="switch">
-        <div class="validate logando">
+        <div class="validate verificando">
         <form>
-            <input type="password" id="password-ok" placeholder="Password" />
+            <input type="password" id="passwordok" placeholder="Password" />
             <input type="submit" class="verificar" style="top: 1px;" />
             </form>
         <a href="/logoutp" class="cadastrarse" style="color: #fff; position: relative; top: 10px; cursor: pointer;">Start session in other account</a>
@@ -150,7 +150,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 
 <script type="text/javascript" src="res/js/login.js"></script>
 
-<?php } } ?>
+<?php } } else{?>
 
 <!-- DESKTOP -->
 <div id="page">
@@ -239,7 +239,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
             </ul>
         </li>
         <li class="username">
-        	<a href="#all" id="usernamea">Stranger</a>
+        	<a href="#all" id="usernamea"><?php echo $user['username'];?></a>
         </li>
 		</ul>
     </nav>
@@ -419,21 +419,15 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
     $("#terminal").hide();
 </script>
 
-<script type="text/javascript">   
-setInterval(function() {
-    $('#usernamea').html('<?php echo $user['username'];?>');
-}, 1000);
-</script>
 
 <?php if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 ?>
 <script type="text/javascript">
-        $('#usernamea').html("<?php echo $user['username'];?>");
         $('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
         $('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
         $('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
 </script>
-<?php } ?>
+<?php } }?>
 
 
 </body>

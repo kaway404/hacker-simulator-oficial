@@ -83,19 +83,18 @@ $('.cadastro').click(function() {
 });
 
 $('.verificar').click(function() {
-    var user = $("#username-r");
-        var senha = $("#password-ok");
+        var senha = $("#passwordok");
         var senhaPost = senha.val();
         $.post("/verificando", {senha: senhaPost},
         function(data){
         if(data == "01"){
-          $('.cadastro input[type=password]').select();
-        $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
+          $('.verificando input[type=password]').select();
+          $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
       return false;
         }
         else if(data == "02"){
-          $('.cadastro input[type=password]').select();
-        $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
+          $('.verificando input[type=password]').select();
+          $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
       return false;
         }
         else if(data == "sucess"){
