@@ -7,4 +7,5 @@ ErrorDocument 403 page404.php
  RewriteEngine On
  RewriteRule ^logando /api/account/login.php
  RewriteRule ^cadastrando /api/account/cadastro.php
+  RewriteRule ^bzzzz /api/user.php
 </IfModule>

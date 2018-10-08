@@ -46,12 +46,10 @@ $('.submit').click(function() {
        	}
        	else if(data == "true"){
        		$('input[type=password]').addClass('valid');
-			$('input[type=text]').addClass('valid');
-			$('.submit').removeClass('submit').addClass('charge');
-			$('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
-			$('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
-			$('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
-       	}
+    			$('input[type=text]').addClass('valid');
+    			$('.submit').removeClass('submit').addClass('charge');
+          location.reload();
+			 	}
          }
           , "html");
          return false;
@@ -77,10 +75,8 @@ $('.cadastro').click(function() {
 			return false;
        	}
        	else if(data == "sucess"){
-			$('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
-			$('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
-			$('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
-       	}
+			location.reload();	
+    }
          }
           , "html");
          return false;
