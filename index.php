@@ -28,17 +28,17 @@
     </div>
 </div>
 
+<!-- BOOT -->
+<div id="pageLoading">
+    <div class="loading">
+        <div class="apple-logo"></div>
+        <div class="spinner"></div>
+    </div>
+</div>
+
 <?php
 if(empty($_COOKIE['iduser'])){?>
 
-
-<!-- BOOT -->
-<div id="pageLoading">
-	<div class="loading">
-		<div class="apple-logo"></div>
-        <div class="spinner"></div>
-	</div>
-</div>
 
 <!-- LOGIN -->
 <div id="pageLogin">
@@ -158,150 +158,6 @@ if(empty($_COOKIE['iduser'])){?>
             <li class="disable">Show All</li>
             </ul>
         </li>
-        <li>
-        	<a href="#all">File</a>   
-            <ul class="sublist">
-            <li>New Finder Window</li>
-            <li>New Folder</li>
-            <li class="disable">New Folder with Selection</li>
-            <li>New Smart Folder</li>
-            <li>New Burn Folder</li>
-            <li class="disable">Open</li>
-            <li class="disable">Open With
-            	<span class="arrow"></span>
-            </li>
-            <li class="disable">Print</li>
-            <li class="disable">Close Window</li>
-            <li class="divider"></li>
-            <li>Get Info</li>
-            <li class="divider"></li>
-            <li class="disable">Compress</li>
-            <li class="divider"></li>
-            <li class="disable">Duplicate</li>
-            <li class="disable">Make Alias</li>
-            <li class="disable">Quick Look</li>
-            <li class="disable">Show Original</li>
-            <li class="disable">Add to Sidebar</li>
-            <li class="divider"></li>
-            <li class="disable">Move to Trash</li>
-            <li class="disable">Eject</li>
-            <li>Burn "Desktop" to Disc...</li>
-            <li class="divider"></li>
-            <li>Find</li>
-            <li class="divider"></li>
-            <li class="disable">Label:</li>
-            </ul> 
-        </li>
-        <li>
-        	<a href="#all">Edit</a>
-        	<ul class="sublist">
-            <li class="disable">Undo</li>
-            <li class="disable">Redo</li>
-            <li class="divider"></li>
-            <li class="disable">Cut</li>
-            <li class="disable">Copy</li>
-            <li class="disable">Paste</li>
-            <li>Select All</li>
-            <li class="divider"></li>
-            <li>Show Clipboard</li>
-            <li class="divider"></li>
-            <li>Special Characters...</li>
-            </ul>
-        </li>
-        <li>
-        	<a href="#all">View</a>
-        	<ul class="sublist">
-            <li class="disable">as Icons</li>
-            <li class="disable">as List</li>
-            <li class="disable">as Columns</li>
-            <li class="disable">as Cover Flow</li>
-            <li class="divider"></li>
-            <li>Clean Up</li>
-            <li>Clean Up By
-            	<span class="arrow"></span>
-                <ul class="sublist-menu">
-                <li>Name</li>
-                <li>Kind</li>
-                <li>Date Modified</li>
-                <li>Date Created</li>
-                <li>Size</li>
-                <li>Label</li>
-                </ul>
-            </li>
-            <li>Sort By
-            	<span class="arrow"></span>
-                <ul class="sublist-menu">
-                <li>None</li>
-                <li class="divider"></li>
-                <li>Snap to Grid</li>
-                <li class="divider"></li>
-                <li>Name</li>
-                <li>Kind</li>
-                <li>Date Last Opened</li>
-                <li>Date Added</li>
-                <li>Date Modified</li>
-                <li>Date Created</li>
-                <li>Size</li>
-                <li>Label</li>
-                </ul>
-            </li>
-            <li class="divider"></li>
-            <li class="disable">Hide Path Bar</li>
-            <li class="disable">Hide Status Bar</li>
-            <li class="disable">Hide Sidebar</li>
-            <li class="divider"></li>
-            <li class="disable">Toolbar</li>
-            <li class="disable">Customize Toolbar...</li>
-            <li class="divider"></li>
-            <li>Show View Options...</li>
-            </ul>    
-        </li>
-        <li>
-        	<a href="#all">Go</a>
-        	<ul class="sublist">
-            <li class="disable">Back</li>
-            <li class="disable">Forward</li>
-            <li>Enclosing Folder</li>
-            <li class="divider"></li>
-            <li>All My Files</li>
-            <li>Documents</li>
-            <li>Desktop</li>
-            <li>Downloads</li>
-            <li>Home</li>
-            <li>Computer</li>
-            <li>AirDrop</li>
-            <li>Network</li>
-            <li>Applications</li>
-            <li>Utilities</li>
-            <li class="divider"></li>
-            <li>Recent Folders
-            	<span class="arrow"></span>
-                <ul class="sublist-menu">
-                <li>2012-01-10</li>
-                <li>Archieves</li>
-                <li>buildFiles</li>
-                <li>MyProjects</li>
-                <li>XCode_iPhone</li>
-                <li class="divider"></li>
-                <li>Clear Menu</li>
-                </ul>
-            </li>
-            <li class="divider"></li>
-            <li>Go to Folder...</li>
-            <li>Connect to Server...</li>
-            </ul>    
-        </li>
-        <li>
-        	<a href="#all">Window</a>
-         	<ul class="sublist">
-            <li class="disable">Minimize</li>
-            <li class="disable">Zoom</li>
-            <li class="disable">Cycle Through Windows</li>
-            <li class="divider"></li>
-            <li>Bring All to Front</li>
-            </ul>   
-        </li>
-        <li><a href="#all">Help</a></li>
         </ul>
 	</nav>
     <nav id="menu-dx">
@@ -318,7 +174,7 @@ if(empty($_COOKIE['iduser'])){?>
             </ul>
         </li>
         <li class="username">
-        	<a href="#all">Alexandre Silva</a>
+        	<a href="#all">Stranger</a>
         </li>
 		</ul>
     </nav>
@@ -345,6 +201,31 @@ if(empty($_COOKIE['iduser'])){?>
         <p>All Rights Reserved</p>
         </div>
         </div>
+    </div>
+</div>
+
+<div id="skype" class="window skype">
+    <nav class="control-window">
+    <a href="#skype" class="close" data-rel="close">close</a>
+    <a href="#" class="minimize">minimize</a>
+    <a href="#" class="deactivate">deactivate</a>
+    </nav>
+    <h1 class="titleInside">Skype</h1>
+    <div class="container">
+        <h1>Skype</h1>
+        <p>Contatos</p>
+    </div>
+</div>
+
+<div id="terminal" class="window terminal">
+    <nav class="control-window">
+    <a href="#terminal" class="close" data-rel="close">close</a>
+    <a href="#" class="minimize">minimize</a>
+    <a href="#" class="deactivate">deactivate</a>
+    </nav>
+    <h1 class="titleInside">Terminal</h1>
+    <div class="container">
+        <h1>Root:</h1>
     </div>
 </div>
 
@@ -414,16 +295,16 @@ if(empty($_COOKIE['iduser'])){?>
                 <img src="res/img/FinderIcon.png" alt="Finder"/>
             </a>
         </li>
-        <li id="launchPad">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>Launchpad</span></em>
-                <img src="res/img/launchPad.png" alt="Launchpad"/>
+        <li id="skype">
+        	<a href="#skype" data-rel="skype">
+            	<em><span>Skype</span></em>
+                <img src="res/img/skype.png" alt="Skype"/>
             </a>
         </li>
-        <li id="expose">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>Mission Control</span></em>
-                <img src="res/img/expose.png" alt="Mission Control"/>
+         <li id="skype">
+            <a href="#terminal" data-rel="terminal">
+                <em><span>Terminal</span></em>
+                <img src="res/img/cmd.png" alt="Terminal"/>
             </a>
         </li>
         <li id="appStore">
@@ -436,30 +317,6 @@ if(empty($_COOKIE['iduser'])){?>
         	<a href="#warning" data-rel="showOp">
             	<em><span>Safari</span></em>
                 <img src="res/img/Safari.png" alt="Safari"/>
-            </a>
-        </li>
-        <li id="iChat">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>iChat</span></em>
-                <img src="res/img/ichat.png" alt="iChat"/>
-            </a>
-        </li>
-        <li id="facetime">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>FaceTime</span></em>
-                <img src="res/img/facetime.png" alt="Facetime"/>
-            </a>
-        </li>
-        <li id="addressBook">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>Address Book</span></em>
-                <img src="res/img/address.png" alt="Address Book"/>
-            </a>
-        </li>
-        <li id="preview">
-        	<a href="#warning" data-rel="showOp">
-            	<em><span>Preview</span></em>
-                <img src="res/img/preview.png" alt="Preview"/>
             </a>
         </li>
         <li id="iTunes">
@@ -485,6 +342,13 @@ if(empty($_COOKIE['iduser'])){?>
 
 </div>
 
+
+<script type="text/javascript">
+    $("#skype").hide();
+    $("#about-this-mac").hide();
+    $("#finder").hide();
+    $("#terminal").hide();
+</script>
 
 <?php if(isset($_COOKIE['iduser'])){
 ?>

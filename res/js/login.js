@@ -15,7 +15,6 @@ $('.submit').click(function() {
 		event.preventDefault();
     }
     else {
-		$('.tooltip-pass').hide();
 		$('input[type=password]').select();
     	$('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
 			return false;

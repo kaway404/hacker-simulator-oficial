@@ -297,3 +297,15 @@ h1.title-mac {
 	margin-top:5px;
 	line-height:14px;
 }
+.window.skype {
+	width:300px;
+	left:50%;
+	top:28%;
+	margin:0px 0 0 -150px;
+}
+.window.terminal {
+	width:300px;
+	left:50%;
+	top:28%;
+	margin:0px 0 0 -150px;
+}

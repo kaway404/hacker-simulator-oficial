@@ -71,7 +71,7 @@ $("a[data-rel=close]").click(function(e) {
 	});
 });
 
-$("a[data-rel=show]").click(function(e) {
+$("a[data-rel=show]").click(function	(e) {
     e.preventDefault();
     $(this.hash).show();
 });
@@ -98,6 +98,20 @@ $("#trash a[data-rel=close]").click(function(e) {
     e.preventDefault();
 	itemR.fadeOut(500);
     $(this.hash).hide();
+});
+
+// App Skype
+$(".dock li a[data-rel=skype]").click(function(e) {
+    e.preventDefault();
+	$(this).addClass('bounce').delay(1600).queue(function() { $(this).removeClass('bounce'); $(this).append(item); item.fadeIn(500); $(this).dequeue(); });
+    $("#skype").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
+});
+
+// App Terminal
+$(".dock li a[data-rel=terminal]").click(function(e) {
+    e.preventDefault();
+	$(this).addClass('bounce').delay(1600).queue(function() { $(this).removeClass('bounce'); $(this).append(item); item.fadeIn(500); $(this).dequeue(); });
+    $("#terminal").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
 });
 
 
