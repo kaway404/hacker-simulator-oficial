@@ -29,7 +29,7 @@ setInterval( function() {
 	var hours = new Date().getHours();
 	$(".hours, .hour").html(( hours < 10 ? "0" : "" ) + hours);
     }, 1000);
-	
+
 
 //-----------------------------------------------------------------------------------
 //	2.	Draggable Windows

@@ -31,7 +31,6 @@
 <?php
 if(empty($_COOKIE['iduser'])){?>
 
-<script type="text/javascript" src="res/js/login.js"></script>
 
 <!-- BOOT -->
 <div id="pageLoading">
@@ -73,11 +72,9 @@ if(empty($_COOKIE['iduser'])){?>
         <div id="switch">
         <div class="validate">
         <form action="#page">
-        	<input type="password" id="password" placeholder="Password" />
+        	<input type="text" id="password" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
             <input type="submit" class="submit" />
-            <div class="tooltip-pass">
-            <p>Password: admin</p>
-            </div>
             </form>
         <a href="#register" style="color: #fff; position: relative; top: 10px;">I dont have any account</a>
         </div>
@@ -85,7 +82,10 @@ if(empty($_COOKIE['iduser'])){?>
         </div>
         </div>
     </div>
-<?php } else{ ?>
+
+<script type="text/javascript" src="res/js/login.js"></script>
+
+<?Php } ?>
 
 <!-- DESKTOP -->
 <div id="page">
@@ -492,7 +492,6 @@ if(empty($_COOKIE['iduser'])){?>
         $('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
 </script>
 
-<?php } ?>
 
 
 
