@@ -159,7 +159,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 	<nav id="menu">
     	<ul>
         <li class="apple">
-        	<a href="#all">Apple</a>
+        	<a href="#all" class="logoa">Apple</a>
             <ul class="sublist">
             <li><a href="#about-this-mac" data-rel="show">About This Mac</a></li>
             <li>Software Updates...</li>
@@ -199,7 +199,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
             <li>Restart...</li>
             <li>Shut Down...</li>
             <li class="divider"></li>
-            <a href="/logout"><li>Log Out...</li></a>
+            <a style="color: #000; left: 0; position: relative;" href="/logout"><li>Log Out...</li></a>
             </ul>
         </li>
         <li class="here">

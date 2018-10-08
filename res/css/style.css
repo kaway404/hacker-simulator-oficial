@@ -584,7 +584,7 @@ input[type=text]:focus ~ .tooltip-pass {
 	position:relative;
 	height:21px;
 }
-#head nav#menu ul li.apple a {
+#head nav#menu ul li.apple .logoa {
 	background:url(../img/apple-logo.png) no-repeat 10px 1px;
     display: block;
     position: relative;
