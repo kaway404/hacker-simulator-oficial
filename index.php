@@ -67,7 +67,7 @@ if(empty($_COOKIE['iduser'])){?>
         <img src="res/img/default.jpg" />
         </div>
         <div class="logName">
-        <p>Alexandre Silva</p>
+        <p>Stranger</p>
         </div>
         <div id="switch">
         <div class="validate">
