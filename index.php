@@ -12,7 +12,7 @@
 <script type="text/javascript" src="res/js/jquery.js"></script>
 <script type="text/javascript" src="res/js/jqueryui.js"></script>
 <script type="text/javascript" src="res/js/moderno.js"></script>
-<script type="text/javascript" src="res/js/clock.js"></script>
+<script type="text/javascript" src="res/js/functions.js"></script>
   
 </head>
 
@@ -28,6 +28,8 @@
     </div>
 </div>
 
+<?php
+if(empty($_COOKIE['iduser'])){?>
 <!-- BOOT -->
 <div id="pageLoading">
 	<div class="loading">
@@ -79,7 +81,7 @@
         </div>
         </div>
     </div>
-
+<?php } ?>
 <!-- DESKTOP -->
 <div id="page">
 <header id="head">
