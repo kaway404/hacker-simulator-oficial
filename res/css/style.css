@@ -293,9 +293,9 @@ input[type=password]:focus ~ .tooltip-pass {
 	-webkit-transition:all 0.3s ease-in-out;	
 }
 
-input[type=username]::-moz-selection { background:rgba(124,196,255,0.7); }
-input[type=username]::selection      { background:rgba(124,196,255,0.7); }
-input[type=username] {
+input[type=text]::-moz-selection { background:rgba(124,196,255,0.7); }
+input[type=text]::selection      { background:rgba(124,196,255,0.7); }
+input[type=text] {
 	width:154px;
 	height:24px;
 	box-shadow:0 0 2px 3px #4189c3;
@@ -304,7 +304,7 @@ input[type=username] {
 	padding:2px 26px 2px 5px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
-input[type=username].valid {
+input[type=text].valid {
 	box-shadow:none;
 	color:#6d6d6d;
 	border-top:1px solid #343434;
@@ -312,17 +312,17 @@ input[type=username].valid {
 	border-right:1px solid #515151;
 	border-bottom:1px solid #515151;
 }
-input[type=username]::-webkit-input-placeholder  {
+input[type=text]::-webkit-input-placeholder  {
 	font-size:12px;
 	color:#6d6d6d;
 	letter-spacing:0;
 }
-input[type=username]:-moz-placeholder {
+input[type=text]:-moz-placeholder {
 	font-size:12px; 
 	color:#6d6d6d;
 	letter-spacing:0;  
 }
-input[type=username]:focus ~ .tooltip-pass {
+input[type=text]:focus ~ .tooltip-pass {
 	opacity:1;
 	-moz-transform:scale(1,1);
 	-webkit-transform:scale(1,1);
@@ -393,7 +393,7 @@ input[type=username]:focus ~ .tooltip-pass {
 }
 #pageLogin .user-avatar #switch .submit{
 	position:absolute;
-	top:3px;
+	top:10px;
 	right:2px;
 	background:url(../img/submit.png) no-repeat;
 	width:24px;
