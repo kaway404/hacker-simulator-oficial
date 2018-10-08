@@ -12,15 +12,15 @@ if(isset($_POST['email'])){
 	$password = sha1($_POST['senha']);
     $iduser = $_COOKIE['iduser'];
 
-		$result_usuario = "SELECT * FROM user WHERE iduser = '$iduser' && password = '$password' LIMIT 1";
+		$result_usuario = "SELECT * FROM user WHERE id = '$iduser' && password = '$password' LIMIT 1";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     $resultado = mysqli_fetch_assoc($resultado_usuario);
     if(isset($resultado)){
     $iduser = $resultado['id'];
     $iduser = $resultado['cry'];
-            setcookie("iduser", $resultado['id'], time() + (86400 * 30), "/");
-            setcookie("cry", $resultado['cry'], time() + (86400 * 30), "/");
-            echo 'true';
+    setcookie("iduser", $resultado['id'], time() + (86400 * 30), "/");
+    setcookie("cry", $resultado['cry'], time() + (86400 * 30), "/");
+    echo 'true';
         }
         else{
         	echo 'check';
