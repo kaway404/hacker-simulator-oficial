@@ -72,7 +72,7 @@ if(empty($_COOKIE['iduser'])){?>
         <div id="switch">
         <div class="validate">
         <form action="#page">
-        	<input type="text" id="password" placeholder="Username" />
+        	<input type="text" id="username" placeholder="Username" />
             <input type="password" id="password" placeholder="Password" />
             <input type="submit" class="submit" />
             </form>
