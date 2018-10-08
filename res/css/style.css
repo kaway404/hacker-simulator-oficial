@@ -402,7 +402,22 @@ input[type=text]:focus ~ .tooltip-pass {
 	border:none;
 	padding:0;
 }
-#pageLogin .user-avatar #switch .submit:active {
+#pageLogin .user-avatar #switch .cadastro:active {
+	background-position:0 -24px;
+}
+
+#pageLogin .user-avatar #switch .cadastro{
+	position:absolute;
+	top:32px;
+	right:2px;
+	background:url(../img/submit.png) no-repeat;
+	width:24px;
+	height:24px;
+	text-indent:-9999px;
+	border:none;
+	padding:0;
+}
+#pageLogin .user-avatar #switch .cadastro:active {
 	background-position:0 -24px;
 }
 

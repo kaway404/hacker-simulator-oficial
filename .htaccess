@@ -1,0 +1,10 @@
+Options All -Indexes
+
+ErrorDocument 404 page404.php
+ErrorDocument 403 page404.php
+
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteRule ^logando /api/account/login.php
+ RewriteRule ^cadastrando /api/account/cadastro.php
+</IfModule>

@@ -1,3 +1,8 @@
+<?php
+include 'config.php';
+include 'api/user.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -38,8 +43,6 @@
 
 <?php
 if(empty($_COOKIE['iduser'])){?>
-
-
 <!-- LOGIN -->
 <div id="pageLogin">
 	<header id="headlogin">
@@ -70,18 +73,31 @@ if(empty($_COOKIE['iduser'])){?>
         <p>Stranger</p>
         </div>
         <div id="switch">
-        <div class="validate">
-        <form action="#page">
+        <div class="validate logando">
+        <form>
         	<input type="text" id="username" placeholder="Username" />
             <input type="password" id="password" placeholder="Password" />
             <input type="submit" class="submit" />
             </form>
-        <a href="#register" style="color: #fff; position: relative; top: 10px;">I dont have any account</a>
+        <a class="cadastrarse" style="color: #fff; position: relative; top: 10px; cursor: pointer;">I dont have any account</a>
+        </div>
+        <div class="validate cadastra">
+        <form>
+            <input type="text" id="username-r" placeholder="Username" />
+            <input type="text" id="email" placeholder="E-mail" />
+            <input type="password" id="password-r" placeholder="Password" />
+            <input type="submit" class="cadastro" />
+            </form>
+        <a class="logandos" style="color: #fff; position: relative; top: 10px; cursor: pointer;">I have account</a>
         </div>
         </div>
         </div>
         </div>
     </div>
+
+<script type="text/javascript">
+    $(".logando").hide();
+</script>
 
 <script type="text/javascript" src="res/js/login.js"></script>
 
@@ -174,7 +190,7 @@ if(empty($_COOKIE['iduser'])){?>
             </ul>
         </li>
         <li class="username">
-        	<a href="#all">Stranger</a>
+        	<a href="#all" id="usernamea">Stranger</a>
         </li>
 		</ul>
     </nav>
@@ -350,9 +366,16 @@ if(empty($_COOKIE['iduser'])){?>
     $("#terminal").hide();
 </script>
 
+<script type="text/javascript">   
+setInterval(function() {
+    $('#usernamea').html('<?php echo $user['username'];?>');
+}, 1000);
+</script>
+
 <?php if(isset($_COOKIE['iduser'])){
 ?>
 <script type="text/javascript">
+        $('#usernamea').html("<?php echo $user['username'];?>");
         $('#pageLogin').addClass('initLog').delay(1900).queue(function() { $(this).removeClass('initLog').addClass('initLogExit'); $(this).dequeue(); });;
         $('#page, #head').delay(2500).queue(function() { $(this).addClass('vis'); $(this).dequeue(); });
         $('.window').delay(3000).queue(function() { $(this).addClass('windows-vis'); $(this).dequeue(); });
