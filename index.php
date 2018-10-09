@@ -472,5 +472,7 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 
 </body>
   
+<!-- Cool -->
+
 
 </html>

@@ -1,7 +1,7 @@
 Options All -Indexes
 
-ErrorDocument 404 page404.php
-ErrorDocument 403 page404.php
+ErrorDocument 404 404
+ErrorDocument 403 404
 
 <IfModule mod_rewrite.c>
  RewriteEngine On
