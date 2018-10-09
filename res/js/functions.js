@@ -111,7 +111,7 @@ $(".dock li a[data-rel=skype]").click(function(e) {
 $(".dock li a[data-rel=terminal]").click(function(e) {
     e.preventDefault();
 	$(this).addClass('bounce').delay(1600).queue(function() { $(this).removeClass('bounce'); $(this).append(item); item.fadeIn(500); $(this).dequeue(); });
-    $("#terminal").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
+    $("#terminald").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
 });
 
 

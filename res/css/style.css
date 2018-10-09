@@ -40,8 +40,8 @@ html, body {
 	-webkit-user-select:none;
 	-moz-user-select:none;
 	user-select:none;
-	-webkit-animation:init 14s linear forwards;
-	-moz-animation:init 14s linear forwards;
+	-webkit-animation:init 5s linear forwards;
+	-moz-animation:init 5s linear forwards;
 }
 
 #pageLoading .apple-logo {
@@ -483,7 +483,7 @@ input[type=text]:focus ~ .tooltip-pass {
 /*-----------------------------------------------------------------------------------*/
 
 #page {
-	background:url(../img/anonymous.jpg);
+	background:url(../img/back.jpg);
 	background-size:100% 100%;
 	background-repeat:no-repeat;
 	width:100%;

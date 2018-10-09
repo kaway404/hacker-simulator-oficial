@@ -33,7 +33,7 @@ $(".logandos").click(function() {
 
 
 $('.submit').click(function() {
-	 	var email = $("#username");
+	 	   var email = $("#username");
         var emailPost = email.val();
         var senha = $("#password");
         var senhaPost = senha.val();

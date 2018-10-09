@@ -11,4 +11,5 @@ ErrorDocument 403 page404.php
  RewriteRule ^bzzzz /api/user.php
  RewriteRule ^logoutp /api/logoutp.php
  RewriteRule ^logout /api/logout.php
+ RewriteRule ^search_user /api/search.php
 </IfModule>

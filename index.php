@@ -283,21 +283,63 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
                 <img src="res/img/default.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: absolute; left: 10px; top: 5px;" />
                 <p><?php echo $user['username'];?></p>
             </div>
+            <input class="buscart" type="text" name="" placeholder="Search friend..">
+            <div class="busca404">
+                <center><span style="position: relative; top: 3px;">Busca não encontrada para <span class="keysearch"></span></span></center>
+            </div>
+            <ul class="busca">
+            </ul>
+        </div>
+        <div class="center">
+            <div class="stranger">
+            <div class="header">
+                <center>
+                    <h1 class="namestranger">Stranger</h1>
+                    <div class="add-friend"></div>
+                </center>
+            </div>
+            <div class="bottom">
+
+            </div>
+            </div>
+            <div class="me">
+                <img style="width: 100px; height: 100px; position: relative; top: 20px; left: 20px; border-radius: 50%;" src="res/img/default.jpg"/>
+                <h1 style="font-size: 18px; position: relative; left: 130px; top: -35px;"><?php echo $user['username'];?></h1>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="terminal" class="window terminal">
+<script type="text/javascript">
+    $(".busca404").hide();
+    $(".center .me").hide();
+</script>
+
+<script type="text/javascript" src="res/js/me-status-skype.js"></script>
+<script type="text/javascript" src="res/js/search-user-skype.js"></script>
+<script type="text/javascript" src="res/js/started_chat_skype.js"></script>
+
+
+<div id="terminald" class="window terminal">
     <nav class="control-window">
-    <a href="#terminal" class="close" data-rel="close">close</a>
+    <a href="#terminald" class="close" data-rel="close">close</a>
     <a href="#" class="minimize">minimize</a>
     <a href="#" class="deactivate">deactivate</a>
     </nav>
     <h1 class="titleInside">Terminal</h1>
-    <div class="container">
-        <h1>Root:</h1>
+    <div class="container" style="overflow-y: auto; overflow-x: hidden; max-height: 370px;">
+        <div class="clear">
+        <div class="commands">
+        </div>
+        </div>
+        <form>
+        <input type="text" class="comando" placeholder="<?php echo $user['username'];?>: command">
+        <button class="commandar" style="opacity: 0;"></button>
+        </form>
     </div>
 </div>
+
+<script type="text/javascript" src="res/js/terminal_command.js"></script>
 
 <div id="about-this-mac" class="window mac">
 	<nav class="control-window">
@@ -414,10 +456,10 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 
 
 <script type="text/javascript">
-    $("#skype").show();
+    $("#skype").hide();
     $("#about-this-mac").hide();
     $("#finder").hide();
-    $("#terminal").hide();
+    $("#terminald").hide();
 </script>
 
 

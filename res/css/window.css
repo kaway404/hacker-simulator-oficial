@@ -304,7 +304,7 @@ h1.title-mac {
 	margin:0px 0 0 -150px;
 }
 #skype{
-	width: 600px;
+	width: 800px;
 	height: 500px;
 	padding-bottom: 22px;
 }
@@ -312,9 +312,22 @@ h1.title-mac {
 	position: relative;
 	left: 0;
 	float: 0;
-	width: 30%;
-	background: #568cc1;
+	width: 200px;
+	background: #5696d6;
 	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#skype .container .left .status{
+	position: relative;
+	height: 40px;
+	width: 100%;
+	transition: 0.5s;
+	cursor: pointer;
+	background: rgba(0,0,0,.5);
+}
+#skype .container .left .status:hover{
+	background: rgba(0,0,0,.70);
 }
 #skype .container .left p{
 	position: relative;
@@ -323,9 +336,155 @@ h1.title-mac {
 	font-size: 14px;
 	left: 35px;
 }
+#skype .container input[type=text]::-moz-selection { background:rgba(124,196,255,0.7); }
+#skype .container input[type=text]::selection      { background:rgba(124,196,255,0.7); }
+#skype .container input[type=text] {
+	width:190px;
+	height:24px;
+	border-radius:3px;
+	border:1px solid rgba(0,0,0,0);
+	padding:2px 26px 2px 5px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	position: relative;
+	left: 5px;
+	top: 4px;
+}
+#skype .container input[type=text].valid {
+	box-shadow:none;
+	color:#6d6d6d;
+	border-top:1px solid #343434;
+	border-left:1px solid #343434;
+	border-right:1px solid #515151;
+	border-bottom:1px solid #515151;
+}
+#skype .container input[type=text]::-webkit-input-placeholder  {
+	font-size:12px;
+	color:#6d6d6d;
+	letter-spacing:0;
+}
+#skype .container input[type=text]:-moz-placeholder {
+	font-size:12px; 
+	color:#6d6d6d;
+	letter-spacing:0;  
+}
+#skype .container input[type=text]:focus ~ .tooltip-pass {
+	opacity:1;
+	-moz-transform:scale(1,1);
+	-webkit-transform:scale(1,1);
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;	
+}
+#skype .container ul{
+	position: relative;
+	top: 20px;
+	transition: 1s;
+}
+#skype .container ul li{
+	color: #fff;
+	width: 100%;
+	font-size: 15px;
+	margin-top: 3px;
+	background: rgba(0,0,0,.10);
+	padding-bottom: 10px;
+	padding-top: 10px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+#skype .container ul li:hover{
+	background: rgba(0,0,0,.50);
+}
+#skype .container ul li span{
+	position: relative;
+	top: -4px;
+	left: 5px;
+}
+#skype .container ul li img{
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	position: relative;
+	left: 0px;
+	top: 2px;
+}
+#skype .container .busca404{
+	position: absolute;
+	width: 190px;
+	height: auto;
+	background: #fff;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.50);
+	top: 65px;
+	left: 5px;
+	border-radius:3px;
+	padding-bottom: 10px;
+	z-index: 100;
+}
+#skype .container .center{
+	position: absolute;
+	width: calc(100% - 200px);
+	float: right;
+	right: 0;
+	height: 100%;
+	top: 0;
+	background: #fff;
+}
+#skype .container .center .header{
+	position: fixed;
+	width: 600px;
+	height: 50px;
+	background: #e2e2e2;
+	border-bottom: 1px solid #ccc;
+}
+#skype .container .center .header h1{
+	position: relative;
+	top: 15px;
+	font-size: 18px;
+}
+#skype .container .center .bottom{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background: #e0e0e0;
+	border-top: 1px solid #ccc;
+	bottom: 0;
+}
+#skype .container .center .header .add-friend{
+	position: absolute;
+	float: right;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	top: 7px;
+	background-image: url("/res/img/icon/equal-1.png");
+	background-size: cover;
+}
 .window.terminal {
-	width:300px;
+	width:400px;
 	left:50%;
 	top:28%;
 	margin:0px 0 0 -150px;
+}
+#terminald .titleInside{
+	text-shadow: 1px 1px #fff;
+	color: #fff;
+}
+#terminald{
+	width: 500px;
+	background: rgba(0,0,0,0.95);
+	height: 400px;
+}
+#terminald input{
+	border: none;
+	box-shadow: 0 0 2px 3px transparent;
+	width: 100%;
+	background: transparent;
+	color: #fff;
+}
+#terminald input::placeholder{
+	color: #fff;
+}
+#terminald .container p{
+	position: relative;
+	left: 3px;
+	padding: 5px;
+	color: #fff;
 }
