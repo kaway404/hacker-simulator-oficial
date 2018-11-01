@@ -7,7 +7,8 @@ $resultado_usuario_news = mysqli_query($conn, $result_usuario_news);
 $news = mysqli_fetch_assoc($resultado_usuario_news);
 if(isset($news)){
 foreach ($resultado_usuario_news as $resultado_usuario_news => $resultado_usuario_newss) {
-$result_usuario_usu = "SELECT * FROM user WHERE id = '$de' ";
+$idusera = $resultado_usuario_newss['de'];
+$result_usuario_usu = "SELECT * FROM user WHERE id = '$idusera' ";
 $resultado_usuario_usu = mysqli_query($conn, $result_usuario_usu);
 $usus = mysqli_fetch_assoc($resultado_usuario_usu);
 foreach ($resultado_usuario_usu as $resultado_usuario_usu => $resultado_usuario_usus) {
