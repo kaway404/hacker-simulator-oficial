@@ -722,7 +722,6 @@ function soundnot(){
 
 function closemsg(){
     $(".new-noti").click(function(){
-        $(this).css("left", "-200%");
         $(this).css("display", "none");
     });
 }
