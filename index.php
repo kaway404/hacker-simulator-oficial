@@ -694,14 +694,12 @@ function bottomscroll(){
                 soundnot();
                 bottomscroll();
                 console.log("work");
-                if(skypeopen == "1"){
-                $.post("/update_2", {iduser: me},
+                $.post("/update_2", {iduser: sykpeiduser},
                 function(update){
                     console.log(update);
                     console.log("update");
                  }
                   , "html");
-                }
                 $(".notification_div .after").before(okaysr);
                 }
              }
@@ -718,12 +716,6 @@ function soundnot(){
     notification.pause();
     notification.currentTime = 0;
     }, 2000);
-}
-
-function closemsg(){
-    $(".new-noti").click(function(){
-        $(this).css("display", "none");
-    });
 }
 </script>
 

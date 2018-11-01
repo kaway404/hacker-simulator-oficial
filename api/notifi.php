@@ -18,5 +18,11 @@ foreach ($resultado_usuario_usu as $resultado_usuario_usu => $resultado_usuario_
         <p>Te mandou uma mensagem</p>
 </div>
 
+<script type="text/javascript">
+	$(".new-noti").click(function(){
+        $(this).css("display", "none");
+    });
+</script>
+
 <?php  } } } 
 else{ echo 'no'; } ?>
