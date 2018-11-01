@@ -2,6 +2,7 @@ $(document).ready(function() {
 //-----------------------------------------------------------------------------------
 //	0.	Modernizr test
 //-----------------------------------------------------------------------------------
+
 if (Modernizr.cssanimations) {
 	$('#fail').remove();
 }
@@ -41,6 +42,9 @@ var a = 3;
 $('.content,.specific,.project,.share').draggable({ handle: '.title-inside', start: function(event, ui) { $(this).css("z-index", a++); }});
 $(".window").draggable({ handle: '.titleInside, .title-mac, .tab', refreshPositions: true, containment: 'window', start: function(event, ui) { $(this).css("z-index", a++); } });
 
+$(".window").click(function(){
+	$(this).css("z-index", (a++));
+});
 
 //-----------------------------------------------------------------------------------
 //	3.	Dock
@@ -114,5 +118,13 @@ $(".dock li a[data-rel=terminal]").click(function(e) {
     $("#terminald").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
 });
 
+// App Terminal
+$(".dock li a[data-rel=preferences]").click(function(e) {
+    e.preventDefault();
+	$(this).addClass('bounce').delay(1600).queue(function() { $(this).removeClass('bounce'); $(this).append(item); item.fadeIn(500); $(this).dequeue(); });
+    $("#preferencest").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
+});
+
 
 }); 
+

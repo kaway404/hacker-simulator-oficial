@@ -7,11 +7,11 @@ if(isset($_COOKIE['iduser']) && (isset($_COOKIE['cry']) )){
 else{
 if(isset($_POST['email'])){
   $ip=$_SERVER['REMOTE_ADDR'];
-	$email = $_POST['email'];
+  $email = $_POST['email'];
 	
 	$password = sha1($_POST['senha']);
 
-		$result_usuario = "SELECT * FROM user WHERE email = '$email' && password = '$password' LIMIT 1";
+	$result_usuario = "SELECT * FROM user WHERE username = '$email' && password = '$password' LIMIT 1";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
     $resultado = mysqli_fetch_assoc($resultado_usuario);
     if(isset($resultado)){

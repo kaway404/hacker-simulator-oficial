@@ -12,4 +12,13 @@ ErrorDocument 403 404
  RewriteRule ^logoutp /api/logoutp.php
  RewriteRule ^logout /api/logout.php
  RewriteRule ^search_user /api/search.php
+ RewriteRule ^finish_tuturial /api/finish_tuturial.php
+ RewriteRule ^status_change /api/status_change.php
+ RewriteRule ^newchat /api/newchat_skype.php
+ RewriteRule ^buzz /api/msg_list_skype.php
+ RewriteRule ^update_1 /api/update_sql_skype.php
+ RewriteRule ^sendmsg /api/sendmsg_skype.php
+ RewriteRule ^count_news /api/notifi.php
+ RewriteRule ^update_2 /api/update_sql_news.php
+ RewriteRule ^bloo /api/bla.php
 </IfModule>

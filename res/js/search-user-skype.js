@@ -2,6 +2,7 @@ $(".buscart").keyup(function(){
 	var texto = $(".buscart").val();
 	if(texto == ""){
 		$(".busca404").hide();
+        $(".busca").html("");
 	}
 	else{
 	$.post("/search_user", {username: texto},

@@ -1,6 +1,6 @@
 <?php
 // Configurações do site
-$namesite = "Hacker Simulator";
+$namesite = "Sushine";
 $language = "pt";
 date_default_timezone_set('America/Sao_Paulo');
 $dataAtual = date('d/m/Y H:i:s');

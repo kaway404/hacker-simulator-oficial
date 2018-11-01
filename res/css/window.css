@@ -447,7 +447,7 @@ h1.title-mac {
 	border-top: 1px solid #ccc;
 	bottom: 0;
 }
-#skype .container .center .header .add-friend{
+#skype .container .center .header .menu{
 	position: absolute;
 	float: right;
 	right: 10px;
@@ -456,6 +456,27 @@ h1.title-mac {
 	top: 7px;
 	background-image: url("/res/img/icon/equal-1.png");
 	background-size: cover;
+}
+#skype .container .status_p_d{
+	font-size: 15px;
+	padding: 10px;
+	position: relative;
+	top: 20px;
+	cursor: pointer;
+}
+#skype .container .change_status{
+	top: 20px !important;
+	left: 10px;
+}
+#skype .container .msgcontent{
+	position: relative;
+	width: 100%;
+	height: 80%;
+	z-index: 1000;
+	top: 50px;
+	background: transparent;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 .window.terminal {
 	width:400px;
@@ -487,4 +508,23 @@ h1.title-mac {
 	left: 3px;
 	padding: 5px;
 	color: #fff;
+}
+.window.ajuda {
+	width:308px;
+	left:50%;
+	top:35%;
+	margin:0px 0 0 -154px;
+	background: -webkit-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 16px, #EDEDED, #EDEDED 16px);
+	background: -moz-linear-gradient(rgba(233, 233, 233, 1.0), rgba(178, 178, 178, 1.0) 16px, #EDEDED, #EDEDED 15px);
+	border-radius:0;
+	box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 4px 4px rgba(0,0,0,0.48), 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+#ajuda .container-inside img, #project .container-inside img, #spec .container-inside img {
+	margin:0 0 5px 0;
+}
+#ajuda.about-this {
+	color:#848484;
+	font-size:12px;
+	font-weight:bold;
+	margin:0;
 }

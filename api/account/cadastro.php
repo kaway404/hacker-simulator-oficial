@@ -33,6 +33,14 @@ echo '02';
 exit();
 }
 
+$result_usuario2 = "SELECT * FROM user WHERE username = '$user' LIMIT 1";
+$resultado_usuario2 = mysqli_query($conn, $result_usuario2);
+$resultado2 = mysqli_fetch_assoc($resultado_usuario2);
+if(isset($resultado2)){
+echo '02';
+exit();
+}
+
 else{
 $sql = "INSERT INTO user (cry, email, password, username)
 VALUES ('".$cry."', '".$email."', '".$senha."', '".$user."')";

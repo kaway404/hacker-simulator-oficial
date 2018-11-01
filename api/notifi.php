@@ -1,0 +1,22 @@
+<?php
+require './../config.php';
+$para = $_POST['iduser'];
+$de = $_COOKIE['iduser'];
+$result_usuario_news = "SELECT * FROM news WHERE de = '$para' && para = '$de' and ativo = '0' ";
+$resultado_usuario_news = mysqli_query($conn, $result_usuario_news);
+$news = mysqli_fetch_assoc($resultado_usuario_news);
+if(isset($news)){
+foreach ($resultado_usuario_news as $resultado_usuario_news => $resultado_usuario_newss) {
+$result_usuario_usu = "SELECT * FROM user WHERE id = '$de' ";
+$resultado_usuario_usu = mysqli_query($conn, $result_usuario_usu);
+$usus = mysqli_fetch_assoc($resultado_usuario_usu);
+foreach ($resultado_usuario_usu as $resultado_usuario_usu => $resultado_usuario_usus) {
+	?>
+
+<div class="new-noti">
+        <h1><?php echo $resultado_usuario_usus['username'];?></h1>
+        <p>Te mandou uma mensagem</p>
+</div>
+
+<?php  } } } 
+else{ echo 'no'; } ?>

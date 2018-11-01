@@ -74,6 +74,11 @@ $('.cadastro').click(function() {
 	    	$('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
 			return false;
        	}
+        else if(data == "0202"){
+          $('.cadastro input[type=password]').select();
+        $('.validate').addClass('error').delay(210).queue(function() { $(this).removeClass('error'); $(this).dequeue(); $('.tooltip-pass').show(); });
+      return false;
+        }
        	else if(data == "sucess"){
 			location.reload();	
     }
