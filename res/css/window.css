@@ -531,3 +531,430 @@ h1.title-mac {
 	font-weight:bold;
 	margin:0;
 }
+
+#chrome-bar {
+  position: relative;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #B6B4B6;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+ #chrome-bar.windowed {
+  top: -9px;
+}
+ #chrome-bar #tab-bar {
+  display: flex;
+  flex-direction: row;
+  height: 34px;
+  padding-left: 8px;
+  background-color: #DEE1E6;
+}
+ #chrome-bar #tab-bar.windowed {
+  height: 43px;
+  padding-top: 9px;
+}
+ #chrome-bar #tab-bar.windowed #window-buttons {
+  top: -9px;
+}
+ #chrome-bar #tab-bar #tabs {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame {
+  flex-grow: 1;
+  max-width: 256px;
+  width: calc(calc(100% - 240px)/3);
+  margin-right: -17px;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame:before {
+  position: absolute;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container {
+  position: relative;
+  left: -8px;
+  overflow: hidden;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .round {
+  z-index: 1;
+  position: absolute;
+  bottom: 0px;
+  width: 32px;
+  height: 32px;
+  border: 8px solid transparent;
+  border-radius: 100%;
+  transition: 0.25s;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .round.round-left {
+  left: -16px;
+  bottom: -8px;
+  border-right-color: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .round.round-right {
+  right: -16px;
+  bottom: -8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-left-color: transparent;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab {
+  z-index: 2;
+  position: relative;
+  left: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 16px);
+  height: 34px;
+  padding: 0px 8px 0px 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.25s;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .icon {
+  width: 16px;
+  height: 16px;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .title {
+  position: relative;
+  top: -1px;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 8px;
+  margin-right: 4px;
+  color: #5F6368;
+  font-size: 12px;
+  pointer-events: none;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .title:before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  box-shadow: inset -18px 0 18px -18px #DEE1E6, inset -18px 0 18px -18px #DEE1E6, inset -18px 0 18px -18px #DEE1E6;
+  content: '';
+  transition: 0.25s;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close {
+  position: relative;
+  min-width: 16px;
+  height: 16px;
+  right: 20px;
+  border-radius: 100%;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close svg {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  pointer-events: none;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close svg path {
+  fill: #5F6368;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close:hover {
+  background-color: #E8EAED;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close:hover svg path {
+  fill: #3B4042;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container .tab .close:active {
+  background-color: #DADCE0;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:after {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  -webkit-transform: translateY(0.5px);
+          transform: translateY(0.5px);
+  width: 1px;
+  height: 20px;
+  background-color: rgba(45, 48, 50, 0.3359375);
+  content: '';
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:hover .round.round-left {
+  border-right-color: #EEEFF1;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:hover .round.round-right {
+  border-left-color: #EEEFF1;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:hover .tab {
+  background-color: #EEEFF1;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:hover .tab .title {
+  color: #5F6368;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container:hover .tab .title:before {
+  box-shadow: inset -18px 0 18px -18px #EEEFF1, inset -18px 0 18px -18px #EEEFF1, inset -18px 0 18px -18px #EEEFF1;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active {
+  z-index: 5;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .round {
+  transition: 0s;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .round.round-left {
+  border-right-color: #FFFFFF;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .round.round-right {
+  border-left-color: #FFFFFF;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .tab {
+  transition: 0s;
+  background-color: #FFFFFF;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .tab .title {
+  color: #3C4043;
+}
+ #chrome-bar #tab-bar #tabs .tab-frame .tab-container.active .tab .title:before {
+  transition: 0s;
+  box-shadow: inset -18px 0 18px -18px #FFFFFF, inset -18px 0 18px -18px #FFFFFF, inset -18px 0 18px -18px #FFFFFF;
+}
+ #chrome-bar #tab-bar #tabs #new-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  margin-left: 9px;
+  border-radius: 100%;
+  transition: .25s;
+}
+ #chrome-bar #tab-bar #tabs #new-tab svg {
+  width: 12px;
+  height: 12px;
+}
+ #chrome-bar #tab-bar #tabs #new-tab svg path {
+  fill: #595C62;
+}
+ #chrome-bar #tab-bar #tabs #new-tab:hover {
+  background-color: #CBCED3;
+}
+ #chrome-bar #tab-bar #tabs #new-tab:active {
+  background-color: #BFC1C6;
+}
+ #chrome-bar #tab-bar #gap {
+  width: 64px;
+}
+ #chrome-bar #tab-bar #window-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+ #chrome-bar #tab-bar #window-buttons > div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 29px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+ #chrome-bar #tab-bar #window-buttons > div img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+ #chrome-bar #tab-bar #window-buttons > div,  #chrome-bar #tab-bar #window-buttons > div * {
+  transition: .25s;
+}
+ #chrome-bar #tab-bar #window-buttons > div:not(.close):hover {
+  background-color: rgba(0, 0, 0, 0.09765625);
+}
+ #chrome-bar #tab-bar #window-buttons > div:not(.close):active {
+  background-color: rgba(0, 0, 0, 0.1953125);
+  transition: 0s;
+}
+ #chrome-bar #tab-bar #window-buttons > div.close:hover {
+  background-color: #E81123;
+}
+ #chrome-bar #tab-bar #window-buttons > div.close:hover img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+ #chrome-bar #tab-bar #window-buttons > div.close:active {
+  background-color: #E36571;
+  transition: 0s;
+}
+ #chrome-bar #main-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  padding: 0 6px;
+  background-color: #FFFFFF;
+}
+ #chrome-bar #main-bar .button {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0 2px;
+  border-radius: 100%;
+  transition: .25s;
+}
+ #chrome-bar #main-bar .button[disabled] svg path {
+  fill: #BABCBE;
+}
+ #chrome-bar #main-bar .button:not([disabled]):hover {
+  background-color: #EEEEEE;
+}
+ #chrome-bar #main-bar .button:not([disabled]):active {
+  transition: .05s;
+  background-color: #E2E2E2;
+}
+ #chrome-bar #main-bar .button:not([disabled]) svg path {
+  fill: #5F6368;
+}
+ #chrome-bar #main-bar .button svg {
+  width: 14px;
+  height: 14px;
+}
+ #chrome-bar #main-bar .button.extension {
+  position: relative;
+}
+ #chrome-bar #main-bar .button.extension img {
+  width: 16px;
+}
+ #chrome-bar #main-bar .button.extension[data-disabled] {
+  -webkit-filter: grayscale(1) opacity(50%);
+          filter: grayscale(1) opacity(50%);
+}
+ #chrome-bar #main-bar .button.extension[data-notifications]:before {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  min-width: 12px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #FFFFFF;
+  background-color: #555555;
+  color: #FFFFFF;
+  font-size: 6px;
+  content: attr(data-notifications);
+}
+ #chrome-bar #main-bar #address-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  height: 28px;
+  margin: 0 8px 0 6px;
+  border-radius: 20px;
+  background-color: #F1F3F4;
+  white-space: pre;
+}
+ #chrome-bar #main-bar #address-bar.selected {
+  box-shadow: 0 0 0 1px #B3CEFB, inset 0 0 0 1px #B3CEFB;
+  background-color: #FFFFFF;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+  min-width: 32px;
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color .25s;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button.show-special {
+  margin-right: 9px;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg path {
+  fill: #5F6368;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.favourite path {
+  fill: #4285F4;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.https,  #chrome-bar #main-bar #address-bar .address-bar-button img.https,  #chrome-bar #main-bar #address-bar .address-bar-button .special.https {
+  width: 12px;
+  height: 12px;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.error,  #chrome-bar #main-bar #address-bar .address-bar-button img.error,  #chrome-bar #main-bar #address-bar .address-bar-button .special.error {
+  width: 14px;
+  height: 14px;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.favicon,  #chrome-bar #main-bar #address-bar .address-bar-button svg.not-favourite,  #chrome-bar #main-bar #address-bar .address-bar-button svg.favourite,  #chrome-bar #main-bar #address-bar .address-bar-button img.favicon,  #chrome-bar #main-bar #address-bar .address-bar-button img.not-favourite,  #chrome-bar #main-bar #address-bar .address-bar-button img.favourite,  #chrome-bar #main-bar #address-bar .address-bar-button .special.favicon,  #chrome-bar #main-bar #address-bar .address-bar-button .special.not-favourite,  #chrome-bar #main-bar #address-bar .address-bar-button .special.favourite {
+  width: 16px;
+  height: 16px;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.special,  #chrome-bar #main-bar #address-bar .address-bar-button img.special,  #chrome-bar #main-bar #address-bar .address-bar-button .special.special {
+  position: relative;
+  margin-left: 10px;
+  color: #5F6368;
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.special:before,  #chrome-bar #main-bar #address-bar .address-bar-button img.special:before,  #chrome-bar #main-bar #address-bar .address-bar-button .special.special:before {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -10px;
+  width: 1px;
+  background-color: #9D9E9F;
+  content: '';
+  transition: .25s;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button svg.hide,  #chrome-bar #main-bar #address-bar .address-bar-button img.hide,  #chrome-bar #main-bar #address-bar .address-bar-button .special.hide {
+  display: none;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button:not([disabled]):hover {
+  background-color: #D6D8DA;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button:not([disabled]):hover .special:before {
+  opacity: 0;
+}
+ #chrome-bar #main-bar #address-bar .address-bar-button:not([disabled]):active {
+  transition: .05s;
+  background-color: #C9CBCD;
+}
+ #chrome-bar #main-bar #address-bar #address {
+  flex-grow: 1;
+  font-size: 14px;
+}
+ #chrome-bar #main-bar #address-bar #address .protocol {
+  color: #5F6368;
+}
+ #chrome-bar #main-bar #address-bar #address .domain {
+  color: #202124;
+}
+ #chrome-bar #main-bar #address-bar #address .extension {
+  color: #80868B;
+}
+ #chrome-bar #main-bar .seperator {
+  width: 1px;
+  height: 16px;
+  margin: 0 6px 0 8px;
+  background-color: #CED0D1;
+}

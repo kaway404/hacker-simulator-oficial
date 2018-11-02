@@ -125,6 +125,12 @@ $(".dock li a[data-rel=preferences]").click(function(e) {
     $("#preferencest").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
 });
 
+$(".dock li a[data-rel=chromet]").click(function(e) {
+    e.preventDefault();
+	$(this).addClass('bounce').delay(1600).queue(function() { $(this).removeClass('bounce'); $(this).append(item); item.fadeIn(500); $(this).dequeue(); });
+    $("#chromer").delay(1630).queue(function() { $(this).show(); $(this).dequeue(); });
+});
+
 
 }); 
 
