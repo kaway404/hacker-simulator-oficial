@@ -503,10 +503,13 @@ h1.title-mac {
 #terminald input::placeholder{
 	color: #fff;
 }
-#terminald .container p{
+#terminald .container .terminal-info{
 	position: relative;
 	left: 3px;
 	padding: 5px;
+	color: #fff;
+}
+#terminald .container .terminal-output{
 	color: #fff;
 }
 .window.ajuda {

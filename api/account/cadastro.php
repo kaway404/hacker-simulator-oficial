@@ -4,6 +4,7 @@ $email = $_POST['email'];
 $user = $_POST['user'];
 $senha = sha1($_POST['senha']);
 $cry = sha1($_POST['email']);
+$randomip = "".mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255);
 
 if(isset($_COOKIE['iduser'],$_COOKIE['cry'])){
 	$logado = 1;
@@ -42,8 +43,8 @@ exit();
 }
 
 else{
-$sql = "INSERT INTO user (cry, email, password, username)
-VALUES ('".$cry."', '".$email."', '".$senha."', '".$user."')";
+$sql = "INSERT INTO user (cry, email, password, username, ip)
+VALUES ('".$cry."', '".$email."', '".$senha."', '".$user."', '".$randomip."')";
 if (mysqli_query($conn, $sql)) {
 	$result_usuario = "SELECT * FROM user WHERE email = '$email' && password = '$senha' LIMIT 1";
 	$resultado_usuario = mysqli_query($conn, $result_usuario);

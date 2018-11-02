@@ -154,6 +154,11 @@ if(empty($_COOKIE['iduser']) && (empty($_COOKIE['cry']) )){?>
 <?php } } ?>
 <?php if(isset($_COOKIE['iduser']) && (isset($_COOKIE['cry']) )){?>
 
+<script type="text/javascript">
+    let thisuser = '<?php echo $user['username'];?>';
+    let thisip = '<?php echo $user['ip'];?>';
+</script>
+
 <!-- DESKTOP -->
 <div id="page">
 <header id="head">
@@ -440,19 +445,16 @@ function bottomscroll(){
     <a href="#" class="deactivate">deactivate</a>
     </nav>
     <h1 class="titleInside">Terminal</h1>
-    <div class="container" style="overflow-y: auto; overflow-x: hidden; max-height: 370px;">
-        <div class="clear">
-        <div class="commands">
-        </div>
-        </div>
-        <form>
-        <input type="text" class="comando" placeholder="<?php echo $user['username'];?>: command">
-        <button class="commandar" style="opacity: 0;"></button>
-        </form>
+    <div class="container" style="overflow-y: auto; overflow-x: hidden; height: 370px;">
+      <div id="container">
+
+      </div>
+      <script src='./res/js/termly-prompt.min.js'></script>
+      <script>
+        var shell = new TermlyPrompt('#container')
+      </script>
     </div>
 </div>
-
-<script type="text/javascript" src="res/js/terminal_command.js"></script>
 
 <div id="about-this-mac" class="window mac">
 	<nav class="control-window">
