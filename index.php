@@ -593,7 +593,7 @@ function bottomscroll(){
 <!-- Chrome -->
 <div id="chromer" class="window chromer" style="width: 70%; top: 40%; left: 25%;">
      <nav class="control-window">
-    <a href="#" class="close" data-rel="close">close</a>
+    <a href="#chromer" class="close" data-rel="close">close</a>
     <a href="#" class="deactivate">deactivate</a>
     <a href="#" class="deactivate">deactivate</a>
     </nav>
